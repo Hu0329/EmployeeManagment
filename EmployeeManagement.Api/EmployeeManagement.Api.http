@@ -1,0 +1,67 @@
+Get http://localhost:5180/employees
+###
+
+Get http://localhost:5180/positions
+###
+Get http://localhost:5180/employees/1
+###
+DELETE http://localhost:5180/departments/14
+###
+
+DELETE http://localhost:5180/positions/10
+###
+Post http://localhost:5180/employees
+Content-Type: application/json
+
+{
+    "First_name": "Cindy",
+    "Last_name": "White",
+    "PositionId": 9,
+    "DepartmentId": 11
+}
+###
+Post http://localhost:5180/departments
+Content-Type: application/json
+
+{
+    "Name": "Test",
+    "PositionIds":[10]
+}
+###
+Post http://localhost:5180/positions
+Content-Type: application/json
+
+{
+    "Name": "Test",
+    "DepartmentIds":[]
+}
+###
+PUT http://localhost:5180/positions/10
+Content-Type: application/json
+
+{
+    "Name": "Te",
+    "DepartmentIds":[1,2]
+}
+
+###
+PUT http://localhost:5180/departments/15
+Content-Type: application/json
+
+{
+    "Name": "Test",
+    "PositionIds":[2]
+}
+
+###
+PUT http://localhost:5180/employees/22/edit
+Content-Type: application/json
+
+{
+    "First_name": "John",
+    "Last_name": "Doe",
+    "PositionId": 2,
+    "DepartmentId": 3
+}
+
+
